@@ -266,21 +266,21 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="home" className="mx-auto flex min-h-[calc(100vh-62px)] max-w-7xl items-center px-4 py-5 md:px-8 lg:py-6">
-      <div className="panel-card solar-frame motion-card grid w-full overflow-hidden xl:grid-cols-[300px_1fr_300px]">
-        <div className="relative min-h-[300px] bg-[#13231f] md:min-h-[390px] xl:min-h-[520px]">
+    <section id="home" className="mx-auto flex min-h-[calc(100svh-62px)] max-w-7xl items-center px-4 py-4 md:px-8 lg:py-5">
+      <div className="panel-card solar-frame motion-card grid w-full overflow-hidden xl:grid-cols-[270px_minmax(0,1fr)_270px] 2xl:grid-cols-[300px_minmax(0,1fr)_285px]">
+        <div className="relative min-h-[280px] bg-[#13231f] md:min-h-[340px] xl:h-[min(500px,calc(100svh-110px))] xl:min-h-0">
             <img
               src="/harshitha-profile.jpeg"
               alt="Harshitha Jayakumar"
-              className="h-full min-h-[300px] w-full object-cover object-[center_38%] md:min-h-[390px] xl:min-h-[520px]"
+              className="h-full min-h-[280px] w-full object-cover object-[center_38%] md:min-h-[340px] xl:min-h-0"
             />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#13231f]/92 to-transparent p-4 text-[#fff4d6]">
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#13231f]/92 to-transparent p-3.5 text-[#fff4d6]">
               <p className="text-xs font-black uppercase tracking-[0.14em] text-[#f2b33d]">Tucson, AZ</p>
-              <h1 className="mt-2 text-2xl font-black leading-tight">Harshitha Jayakumar</h1>
+              <h1 className="mt-1.5 text-2xl font-black leading-tight">Harshitha Jayakumar</h1>
               <p className="mt-1 font-semibold text-[#fff4d6]/85">Software Engineer</p>
             </div>
         </div>
-        <div className="relative grid content-center gap-4 overflow-hidden p-4 md:p-6">
+        <div className="relative grid content-center gap-3 overflow-hidden p-4 md:p-5">
           <div className="circuit-lines absolute inset-0 opacity-50" />
           <div className="relative">
             <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#d6c59d] bg-[#fff8e3] px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-[#5f4a1b]">
@@ -290,12 +290,12 @@ function Hero() {
           </div>
           <div className="relative">
             <p className="eyebrow-dark">About Me</p>
-            <h2 className="text-[clamp(1.8rem,3.4vw,3.25rem)] font-black leading-none text-[#13231f]">Professional Summary</h2>
-            <p className="mt-4 max-w-4xl text-[0.98rem] leading-7 text-[#47564f]">
+            <h2 className="text-[clamp(1.75rem,3vw,3rem)] font-black leading-none text-[#13231f]">Professional Summary</h2>
+            <p className="mt-3 max-w-4xl text-[0.94rem] leading-6 text-[#47564f] 2xl:text-base 2xl:leading-7">
               Software engineer with experience building internal tools, dashboards, cloud automations, and data pipelines for healthcare, construction, MedTech, and energy analytics teams. I specialize in turning messy operations data into self-service systems that non-technical users can trust. For Solar Gain, I bring full-stack ownership, workflow thinking, and a genuine interest in renewable energy.
             </p>
           </div>
-          <div className="relative grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <div className="relative grid gap-2.5 md:grid-cols-2 xl:grid-cols-4">
             <InfoTile icon={MapPin} title="Location" copy="Tucson, Arizona" />
             <InfoTile icon={BriefcaseBusiness} title="Role Focus" copy="Internal tools, automation, and operations visibility" />
             {education.map((item) => (
@@ -303,7 +303,7 @@ function Hero() {
             ))}
           </div>
         </div>
-        <div className="border-t border-[#d6c59d] bg-[#fff8e3]/70 p-4 xl:border-l xl:border-t-0">
+        <div className="border-t border-[#d6c59d] bg-[#fff8e3]/70 p-3 xl:border-l xl:border-t-0">
           <SolarCommandCard />
         </div>
       </div>
@@ -352,39 +352,39 @@ function AboutMe() {
 
 function InfoTile({ icon: Icon, title, copy }) {
   return (
-    <article className="rounded-md border border-[#d6c59d] bg-[#fff8e3]/90 p-3">
-      <Icon className="h-5 w-5 text-[#d98221]" />
-      <h3 className="mt-3 text-sm font-black text-[#13231f]">{title}</h3>
-      <p className="mt-1 text-xs leading-5 text-[#47564f]">{copy}</p>
+    <article className="rounded-md border border-[#d6c59d] bg-[#fff8e3]/90 p-2.5">
+      <Icon className="h-4 w-4 text-[#d98221]" />
+      <h3 className="mt-2 text-[0.82rem] font-black leading-5 text-[#13231f]">{title}</h3>
+      <p className="mt-1 text-[0.75rem] leading-5 text-[#47564f]">{copy}</p>
     </article>
   );
 }
 
 function SolarCommandCard() {
   return (
-    <aside className="solar-frame relative h-full overflow-hidden rounded-md border border-[#d6c59d] bg-[#fffaf0] p-4" aria-label="Solar Gain operating system preview">
+    <aside className="solar-frame relative h-full overflow-hidden rounded-md border border-[#d6c59d] bg-[#fffaf0] p-3" aria-label="Solar Gain operating system preview">
       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#f2b33d] via-[#7fd8be] to-[#f2b33d]" />
       <div className="circuit-lines absolute inset-0 opacity-35" />
-      <div className="relative mb-4 flex items-center justify-between gap-3">
+      <div className="relative mb-3 flex items-start justify-between gap-2">
         <div>
-          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#2d6558]">Solar Gain readiness</p>
-          <h2 className="mt-1 text-xl font-black leading-tight text-[#13231f]">Solar Ops Platform View</h2>
+          <p className="text-[0.68rem] font-black uppercase tracking-[0.16em] text-[#2d6558]">Solar Gain readiness</p>
+          <h2 className="mt-1 text-lg font-black leading-tight text-[#13231f]">Solar Ops Platform View</h2>
         </div>
-        <span className="rounded-full bg-[#f2b33d]/25 px-3 py-1 text-xs font-black text-[#5c3d00]">Future build</span>
+        <span className="rounded-full bg-[#f2b33d]/25 px-2.5 py-1 text-[0.68rem] font-black text-[#5c3d00]">Future build</span>
       </div>
-      <div className="solar-scene relative h-36 overflow-hidden rounded-md border border-[#d6c59d] bg-[#fff8e3]">
+      <div className="solar-scene relative h-28 overflow-hidden rounded-md border border-[#d6c59d] bg-[#fff8e3]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_84%_24%,rgba(242,179,61,0.32),transparent_18rem)]" />
-        <SunMedium className="sun-spin absolute right-6 top-5 h-11 w-11 text-[#d98221]" strokeWidth={1.7} />
-        <div className="panel-row absolute bottom-8 left-[8%] right-[8%] grid grid-cols-5 gap-1.5">
+        <SunMedium className="sun-spin absolute right-5 top-4 h-9 w-9 text-[#d98221]" strokeWidth={1.7} />
+        <div className="panel-row absolute bottom-6 left-[8%] right-[8%] grid grid-cols-5 gap-1">
           {Array.from({ length: 10 }).map((_, index) => (
-            <span key={index} className="h-8 -skew-x-12 border border-[#123d5a]/35 bg-[#3fa7d6]/25" />
+            <span key={index} className="h-6 -skew-x-12 border border-[#123d5a]/35 bg-[#3fa7d6]/25" />
           ))}
         </div>
-        <div className="data-line absolute left-6 right-6 top-20 h-1 rounded-full bg-[#2d6558]/20">
-          <span className="scan-dot absolute -top-1 h-3 w-3 rounded-full bg-[#f2b33d]" />
+        <div className="data-line absolute left-5 right-5 top-16 h-1 rounded-full bg-[#2d6558]/20">
+          <span className="scan-dot absolute -top-1 h-2.5 w-2.5 rounded-full bg-[#f2b33d]" />
         </div>
       </div>
-      <div className="relative mt-3 grid gap-2">
+      <div className="relative mt-2.5 grid grid-cols-2 gap-2">
         <Metric value="95%" label="manual work cut" />
         <Metric value="16+" label="dashboards & tools built" />
         <Metric value="50+" label="sites tracked live" />
@@ -396,9 +396,9 @@ function SolarCommandCard() {
 
 function Metric({ value, label }) {
   return (
-    <article className="rounded-md border border-[#d6c59d] bg-[#fff8e3] p-3 text-[#13231f]">
-      <strong className="block text-2xl font-black leading-none">{value}</strong>
-      <span className="mt-1 block text-xs font-semibold leading-4 text-[#47564f]">{label}</span>
+    <article className="rounded-md border border-[#d6c59d] bg-[#fff8e3] p-2.5 text-[#13231f]">
+      <strong className="block text-xl font-black leading-none">{value}</strong>
+      <span className="mt-1 block text-[0.68rem] font-semibold leading-4 text-[#47564f]">{label}</span>
     </article>
   );
 }
