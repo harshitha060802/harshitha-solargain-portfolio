@@ -266,36 +266,36 @@ function Header() {
 
 function Hero() {
   return (
-    <section id="home" className="mx-auto flex min-h-[calc(100svh-62px)] max-w-7xl items-center px-4 py-4 md:px-8 lg:py-5">
-      <div className="panel-card solar-frame motion-card grid w-full overflow-hidden xl:grid-cols-[270px_minmax(0,1fr)_270px] 2xl:grid-cols-[300px_minmax(0,1fr)_285px]">
-        <div className="relative min-h-[280px] bg-[#13231f] md:min-h-[340px] xl:h-[min(500px,calc(100svh-110px))] xl:min-h-0">
+    <section id="home" className="mx-auto flex min-h-[calc(100svh-62px)] max-w-[1724px] items-center px-3 py-3 md:px-5 lg:px-6 xl:px-8">
+      <div className="panel-card solar-frame motion-card grid w-full overflow-hidden lg:grid-cols-[280px_minmax(0,1fr)_290px] xl:grid-cols-[340px_minmax(0,1fr)_320px] 2xl:grid-cols-[385px_minmax(0,1fr)_365px]">
+        <div className="relative min-h-[260px] bg-[#13231f] md:min-h-[320px] lg:h-[min(590px,calc(100svh-92px))] lg:min-h-0 2xl:h-[min(710px,calc(100svh-92px))]">
             <img
               src="/harshitha-profile.jpeg"
               alt="Harshitha Jayakumar"
-              className="h-full min-h-[280px] w-full object-cover object-[center_38%] md:min-h-[340px] xl:min-h-0"
+              className="h-full min-h-[260px] w-full object-cover object-[center_38%] md:min-h-[320px] lg:min-h-0"
             />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#13231f]/92 to-transparent p-3.5 text-[#fff4d6]">
+            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#13231f]/92 to-transparent p-3 text-[#fff4d6] xl:p-3.5">
               <p className="text-xs font-black uppercase tracking-[0.14em] text-[#f2b33d]">Tucson, AZ</p>
-              <h1 className="mt-1.5 text-2xl font-black leading-tight">Harshitha Jayakumar</h1>
+              <h1 className="mt-1.5 text-xl font-black leading-tight xl:text-2xl">Harshitha Jayakumar</h1>
               <p className="mt-1 font-semibold text-[#fff4d6]/85">Software Engineer</p>
             </div>
         </div>
-        <div className="relative grid content-center gap-3 overflow-hidden p-4 md:p-5">
+        <div className="relative grid content-center gap-4 overflow-hidden p-4 lg:p-6 xl:gap-5 xl:p-8 2xl:p-10">
           <div className="circuit-lines absolute inset-0 opacity-50" />
           <div className="relative">
-            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#d6c59d] bg-[#fff8e3] px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-[#5f4a1b]">
+            <span className="mb-3 inline-flex items-center gap-2 rounded-full border border-[#d6c59d] bg-[#fff8e3] px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-[#5f4a1b] xl:mb-5 xl:px-4 xl:py-1.5">
               <span className="h-2 w-2 rounded-full bg-[#f2b33d] shadow-[0_0_14px_rgba(242,179,61,0.9)]" />
               Solar Gain ready
             </span>
           </div>
           <div className="relative">
             <p className="eyebrow-dark">About Me</p>
-            <h2 className="text-[clamp(1.75rem,3vw,3rem)] font-black leading-none text-[#13231f]">Professional Summary</h2>
-            <p className="mt-3 max-w-4xl text-[0.94rem] leading-6 text-[#47564f] 2xl:text-base 2xl:leading-7">
+            <h2 className="text-[clamp(2.1rem,3.3vw,4.15rem)] font-black leading-none text-[#13231f]">Professional Summary</h2>
+            <p className="mt-4 max-w-4xl text-base leading-7 text-[#47564f] xl:text-lg xl:leading-8">
               Software engineer with experience building internal tools, dashboards, cloud automations, and data pipelines for healthcare, construction, MedTech, and energy analytics teams. I specialize in turning messy operations data into self-service systems that non-technical users can trust. For Solar Gain, I bring full-stack ownership, workflow thinking, and a genuine interest in renewable energy.
             </p>
           </div>
-          <div className="relative grid gap-2.5 md:grid-cols-2 xl:grid-cols-4">
+          <div className="relative grid gap-3 md:grid-cols-2 xl:grid-cols-4">
             <InfoTile icon={MapPin} title="Location" copy="Tucson, Arizona" />
             <InfoTile icon={BriefcaseBusiness} title="Role Focus" copy="Internal tools, automation, and operations visibility" />
             {education.map((item) => (
@@ -303,7 +303,7 @@ function Hero() {
             ))}
           </div>
         </div>
-        <div className="border-t border-[#d6c59d] bg-[#fff8e3]/70 p-3 xl:border-l xl:border-t-0">
+        <div className="border-t border-[#d6c59d] bg-[#fff8e3]/70 p-3 lg:border-l lg:border-t-0">
           <SolarCommandCard />
         </div>
       </div>
